@@ -26,5 +26,7 @@ public class Ej3 {
             }
             pal1 = teclado.nextLine();
         }while (!pal1.equals(contra));
+
+        System.out.println( "Enhorabuena, lo has acertado" );
     }
 }
