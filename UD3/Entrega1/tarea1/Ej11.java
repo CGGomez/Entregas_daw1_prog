@@ -18,10 +18,10 @@ public class Ej11 {
     }
 
     public static int resultado(int num1, int num2){
-       int potencia =num1;
+       int potencia =1;
         if (num1 > 0) {
-          for (int i=num1; i <= num2;i++){
-              potencia = num1 * potencia;
+          for (int i=0; i < num2;i++){
+              potencia = potencia * num1;
           }
        }
         return potencia;
