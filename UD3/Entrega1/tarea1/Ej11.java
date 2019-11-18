@@ -18,13 +18,22 @@ public class Ej11 {
     }
 
     public static int resultado(int num1, int num2){
-        int potenciado = (int) Math.pow(num1,num2);
-
-        return potenciado;
+       int potencia =num1;
+        if (num1 > 0) {
+          for (int i=num1; i <= num2;i++){
+              potencia = num1 * potencia;
+          }
+       }
+        return potencia;
     }
 
     static int resultadorecursivo(int num1, int num2){
-       int potencia = resultadorecursivo(num1, num2);
-       return potencia;
+       if (num1 > 0) {
+           if (num2 == 1) {
+               return num1;
+           }
+       }
+
+       return num1 * resultadorecursivo(num1, num2-1);
     }
 }
