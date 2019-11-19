@@ -6,11 +6,11 @@ public class Ej7 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         int alumno;
-        int media1=0;
-        int media2=0;
-        int media3=0;
-        int mediaalumno=0;
-
+        double media1=0;
+        double media2=0;
+        double media3=0;
+        double mediaalumno=0;
+        int tablas = 0;
 
         int primer[] = new int[5];
         int segundo[] = new int[5];
@@ -21,19 +21,28 @@ public class Ej7 {
             primer[i] = teclado.nextInt();
             media1 = media1 + primer[i];
             teclado.nextLine();
+            if (i == primer.length-1){
+                tablas++;
+            }
         }
         System.out.println( "Introduzca las notas del segundo trimestre" );
         for (int i =0; i < segundo.length;i++){
             segundo[i] = teclado.nextInt();
             media2 = media2 + segundo[i];
             teclado.nextLine();
+            if (i == segundo.length-1){
+                tablas++;
+            }
         }
 
-        System.out.println( "Introduzca las notas del segundo trimestre" );
+        System.out.println( "Introduzca las notas del tercer trimestre" );
         for (int i =0; i < tercer.length;i++){
             tercer[i] = teclado.nextInt();
             media3 = media3 + tercer[i];
             teclado.nextLine();
+            if (i == tercer.length-1){
+                tablas++;
+            }
         }
 
         System.out.println( "Media del primer trismestre: "+ media1 / (primer.length) );
@@ -47,7 +56,7 @@ public class Ej7 {
             for (int i = 0; i <= alumno; i++){
                 if (i == alumno){
                     mediaalumno = primer[i]+segundo[i]+tercer[i];
-                    System.out.print( mediaalumno/3);
+                    System.out.print( mediaalumno/tablas);
                 }
             }
         }else {
