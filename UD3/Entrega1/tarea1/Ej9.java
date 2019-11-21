@@ -2,26 +2,24 @@ package tarea1;
 
 import java.util.Scanner;
 
-public class Ej8 {
+public class Ej9 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         int num1;
 
-        System.out.println( "Introduzca un número, contaremos los primos que son divisores" );
+        System.out.println("Introduzca un número, se le buscará los divisores primos que tiene");
         num1 = teclado.nextInt();
 
-        System.out.println( "El número de divisores primos que hay son:" );
-        System.out.println(divisoresPrimos(num1));
+        System.out.println("Los Divisores primos son:");
+        DivisoresPrimos(num1);
     }
 
-    public static int divisoresPrimos(int num1){
-        int contador = 1;
+    static void DivisoresPrimos(int num1){
         for (int i = 2; i<= num1;i++){
             if(EsPrimo(i) && num1 % i ==0){
-                contador++;
+                System.out.println(i);
             }
         }
-        return (contador);
     }
     static boolean EsPrimo (int num1){
         boolean primo = true;
@@ -38,3 +36,5 @@ public class Ej8 {
         return primo;
     }
 }
+
+
